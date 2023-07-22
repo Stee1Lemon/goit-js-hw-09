@@ -7,7 +7,7 @@ const refs = {
 refs.btnStart.addEventListener('click', startRandomBodyColorInterval);
 refs.btnStop.addEventListener('click', stopRandomBodyColorInterval);
 
-let intervalID;
+let intervalID = 0;
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
@@ -27,7 +27,7 @@ function startRandomBodyColorInterval() {
     }, 1000);
 }
 
-function stopRandomBodyColorInterval(playRandomColor) {
+function stopRandomBodyColorInterval() {
   refs.btnStart.disabled = false;
   clearInterval(intervalID);
 }
