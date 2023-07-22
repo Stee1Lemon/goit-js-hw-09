@@ -10,7 +10,6 @@ body {
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
-  text-align: center;
 }
 
 img {
@@ -19,6 +18,7 @@ img {
 }
 
 .btn-start {
+  margin: 0 auto;
   align-items: center;
   appearance: none;
   background-color: #fcfcfd;
@@ -29,7 +29,7 @@ img {
   box-sizing: border-box;
   color: #36395a;
   cursor: pointer;
-  display: inline-flex;
+  display: flex;
   font-family: 'JetBrains Mono', monospace;
   height: 48px;
   justify-content: center;
@@ -61,13 +61,15 @@ img {
   transform: translateY(-2px);
 }
 
-.btn-start:active {
+.btn-start:active,
+.btn-start:disabled {
   box-shadow: #d6d6e7 0 3px 7px inset;
   transform: translateY(2px);
 }
 
 #datetime-picker {
-  display: inline-block;
+  display: block;
+  margin: 10px auto 20px;
   font-size: 18;
   color: #f4f2ca;
   text-align: center;
