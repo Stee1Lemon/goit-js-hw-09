@@ -14,6 +14,11 @@ function startingFn(event) {
   const step = Number(document.querySelector('[name="step"]').value);
   const amount = document.querySelector('[name="amount"]').value;
 
+  if (delay < 0 || step < 0 || amount <= 0) {
+    Notify.failure('❌ Choose proper values');
+    return;
+  }
+
   for (let i = 0; i < amount; i += 1) {
     position += 1;
     createPromise(position, delay)
