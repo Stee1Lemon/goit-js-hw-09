@@ -8,6 +8,7 @@ const refs = {
   hoursEl: document.querySelector('[data-hours]'),
   minutesEl: document.querySelector('[data-minutes]'),
   secondsEl: document.querySelector('[data-seconds]'),
+  dateTimePickerEl: document.querySelector('#datetime-picker'),
 };
 
 let selectedTime = null;
@@ -35,6 +36,7 @@ class Timer {
       return;
     }
 
+    refs.dateTimePickerEl.disabled = true;
     this.timerID = setInterval(() => {
       const currentTime = Date.now();
       const timeRemaining = selectedTime - currentTime;
